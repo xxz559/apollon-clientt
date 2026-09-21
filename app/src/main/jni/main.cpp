@@ -107,11 +107,10 @@ NoCaveVignette
 #include "ui_state.h"
 #include "variables.h"
 #include "buttons.h"
+#include "menu_utils.h"
 #include "hud.h"
 
 #include "hook_utils.h"
-#include "menu_utils.h"
-
 
 extern "C" {
     JNIEXPORT void JNICALL Java_com_mojang_minecraftpe_platforms_Platform2_init(JNIEnv* env, jclass cls);
