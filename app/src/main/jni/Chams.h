@@ -12,7 +12,8 @@
 using namespace std;
 static void *handle;
 static void *input;
-static bool enableRainbow, enableRainbowWall, osmtBoost, xrayCaves, panic;
+static bool enableRainbow, enableRainbowWall, xrayCaves, panic;
+extern bool osmtBoost;
 
 int chamsint = 0;
 

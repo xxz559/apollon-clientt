@@ -746,7 +746,7 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
 								if (player.isProtected) {
 									ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1, 0, 0, 1));
 								} else if (player.isFriend) {
-									ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0, 1, 1,));
+									ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0, 1, 1, 1));
 								} else {
 									ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0, 1, 0, 1));
 								}
