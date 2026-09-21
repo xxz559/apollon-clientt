@@ -1143,10 +1143,15 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
                 ImGui::Text(OBFUSCATE("Made By ZEFF"));
                 break;
         }
-            case 8: {
-	           ImGui::Checkbox(OBFUSCATE("Edit Mode (drag/resize in menu)"), &editButtonsMode);
-	           DrawSeparatorToWindowEdge(endVertical, 16.0f);
-    
+        ImGui::EndGroup();
+		ImGui::PopStyleVar(ImGuiStyleVar_WindowTitleAlign);
+    }
+	}
+	}
+	case 8: {
+	ImGui::Checkbox(OBFUSCATE("Edit Mode (drag/resize in menu)"), &editButtonsMode);
+	DrawSeparatorToWindowEdge(endVertical, 16.0f);
+	
 	if (ImGui::Button(OBFUSCATE("Add Button"))) {
 		CustomButton btn;
 		btn.name = "New";
@@ -1197,13 +1202,6 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
 	}
 	break;
 }
-
-    }                                                  // закрывает switch (pageId)
-    ImGui::EndGroup();
-    ImGui::PopStyleVar(ImGuiStyleVar_WindowTitleAlign);
-    }                                                  // закрывает if (ImGui::Begin(...))
-    }                                                  // закрывает if (!panic)
-    }                                                  // закрывает функцию BeginDraw
 	if (CI != NULL) {
 		if (!inMenu && !panic) {
 			if (inHudScreen) {

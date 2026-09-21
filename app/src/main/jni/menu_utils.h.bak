@@ -11,24 +11,6 @@
 #include "Images/Platforms/windows_icon.h"
 #include "Images/Platforms/xbox_icon.h"
 
-#include "Images/death_icon.h"
-#include "Images/heart_icon.h"
-#include "Images/heart_blink_icon.h"
-
-
-// ===== Forward declarations (до первого использования) =====
-float distanceTo(vec3_t *playerPosition, vec3_t *target);
-float mobDistanceTo(vec3_t *playerPosition, vec3_t *target, float hitboxHeight);
-float hackDistanceTo(vec3_t *playerPosition, vec3_t *target);
-bool OWorldToScreen(
-    glm::vec3 origin,
-    glm::vec3 pos,
-    glm::vec2& screen,
-    glm::vec2 fov,
-    glm::vec2 displaySize,
-    glm::mat4 viewMatrix
-);
-
 float calculateResolutionX(int screenWidth, int baseWidth) {
     float scale = static_cast<float>(screenWidth) / baseWidth;
     return scale;
