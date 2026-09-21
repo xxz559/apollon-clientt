@@ -1,3 +1,5 @@
+#include "ui_state.h"
+
 json cfg;
 bool fullBright, fogEnable, fastDrop, noHurtCam, noCamDist, noBoatRotation,
 noCamSleep, placeCam, unlockMarket, noSlowDown, fastFall,

@@ -103,9 +103,12 @@ NoCaveVignette
 #include "dark_theme.h"
 #include "Vector.h"
 #include "hook_classes.h"
+
+#include "ui_state.h"
 #include "variables.h"
 #include "buttons.h"
 #include "hud.h"
+
 #include "hook_utils.h"
 #include "menu_utils.h"
 

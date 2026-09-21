@@ -3,24 +3,9 @@
 #include <string>
 #include <ImGui/imgui.h>
 
-bool editButtonsMode = false;
 
-const char* ButtonActions[] = {
-    "None",
-    "KillAura",
-    "MobAura",
-    "NoClip",
-    "FullBright",
-    "Xray",
-    "NoSlowDown",
-    "FastFall",
-    "AutoClicker",
-    "Sprint",
-    "AutoClickBuild",
-    "AntiKnockback",
-    "Step",
-    "LadderFly"
-};
+#include "ui_state.h"
+
 
 void ExecuteButtonAction(int action) {
     switch (action) {
