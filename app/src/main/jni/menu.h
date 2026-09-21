@@ -1115,9 +1115,9 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
                 }
 				break;
             case 7:
-				//ImGui::Text(inMemoryFunction.c_str());
-				//ImGui::DragInt(OBFUSCATE("ActorId"), &nearActorId, 0.05f, 1, 50);
-				ImGui::Text(OBFUSCATE("Thanks MCPELIFE for a decent pairip bypass :)"));
+                //ImGui::Text(inMemoryFunction.c_str());
+                //ImGui::DragInt(OBFUSCATE("ActorId"), &nearActorId, 0.05f, 1, 50);
+                ImGui::Text(OBFUSCATE("Thanks MCPELIFE for a decent pairip bypass :)"));
                 DrawSeparatorToWindowEdge(endVertical, 16.0f);
                 ImGui::Text(OBFUSCATE("Mod Version: v4.62")); 
                 ImGui::Text(OBFUSCATE("Game Version: 1.21.111"));
@@ -1125,22 +1125,22 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
                 ImGui::Text(OBFUSCATE("Bit: 64")); 
                 #elif defined(__ARM_ARCH_7A__)
                 ImGui::Text(OBFUSCATE("Bit: 32"));
-				#else
-				ImGui::Text(OBFUSCATE("Bit: 86_64"));
+                #else
+                ImGui::Text(OBFUSCATE("Bit: 86_64"));
                 #endif
                 DrawSeparatorToWindowEdge(endVertical, 16.0f);
-				float imageSize = ImGui::GetFontSize();
-				ImGui::Image((ImTextureID)(intptr_t)youtube_icon, ImVec2(imageSize, imageSize));
-				ImGui::SameLine(calcResX * 35);
-				ImGui::Text(OBFUSCATE(": @zeff_source"));
-				DrawSeparatorToWindowEdge(endVertical, 16.0f);
-				ImGui::Image((ImTextureID)(intptr_t)telegram_icon, ImVec2(imageSize, imageSize));
-				ImGui::SameLine(calcResX * 35);
-				ImGui::Text(OBFUSCATE(": @zeff_cheats"));
+                float imageSize = ImGui::GetFontSize();
+                ImGui::Image((ImTextureID)(intptr_t)youtube_icon, ImVec2(imageSize, imageSize));
+                ImGui::SameLine(calcResX * 35);
+                ImGui::Text(OBFUSCATE(": @zeff_source"));
                 DrawSeparatorToWindowEdge(endVertical, 16.0f);
-				ImGui::Image((ImTextureID)(intptr_t)discord_icon, ImVec2(imageSize, imageSize));
-				ImGui::SameLine(calcResX * 35);
-				ImGui::Text(OBFUSCATE(": https://discord.gg/RSC4ZrVjS8"));
+                ImGui::Image((ImTextureID)(intptr_t)telegram_icon, ImVec2(imageSize, imageSize));
+                ImGui::SameLine(calcResX * 35);
+                ImGui::Text(OBFUSCATE(": @zeff_cheats"));
+                DrawSeparatorToWindowEdge(endVertical, 16.0f);
+                ImGui::Image((ImTextureID)(intptr_t)discord_icon, ImVec2(imageSize, imageSize));
+                ImGui::SameLine(calcResX * 35);
+                ImGui::Text(OBFUSCATE(": https://discord.gg/RSC4ZrVjS8"));
                 DrawSeparatorToWindowEdge(endVertical, 16.0f);
                 ImGui::Text(OBFUSCATE("Made By ZEFF"));
                 break;
@@ -1199,7 +1199,7 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
 	}
 	break;
 }
-
+ 
     }                                                  // закрывает switch (pageId)
     ImGui::EndGroup();
     ImGui::PopStyleVar(ImGuiStyleVar_WindowTitleAlign);
