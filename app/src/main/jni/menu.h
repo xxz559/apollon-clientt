@@ -1114,7 +1114,7 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
 				ImGui::EndTabBar();
                 }
 				break;
-            case 7:
+            case 7: { 
                 //ImGui::Text(inMemoryFunction.c_str());
                 //ImGui::DragInt(OBFUSCATE("ActorId"), &nearActorId, 0.05f, 1, 50);
                 ImGui::Text(OBFUSCATE("Thanks MCPELIFE for a decent pairip bypass :)"));
@@ -1144,7 +1144,7 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
                 DrawSeparatorToWindowEdge(endVertical, 16.0f);
                 ImGui::Text(OBFUSCATE("Made By ZEFF"));
                 break;
-        
+            }
             case 8: {
 	           ImGui::Checkbox(OBFUSCATE("Edit Mode (drag/resize in menu)"), &editButtonsMode);
 	           DrawSeparatorToWindowEdge(endVertical, 16.0f);
