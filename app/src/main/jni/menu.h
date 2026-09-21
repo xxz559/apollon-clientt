@@ -1144,7 +1144,7 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
                 DrawSeparatorToWindowEdge(endVertical, 16.0f);
                 ImGui::Text(OBFUSCATE("Made By ZEFF"));
                 break;
-        }
+        
             case 8: {
 	           ImGui::Checkbox(OBFUSCATE("Edit Mode (drag/resize in menu)"), &editButtonsMode);
 	           DrawSeparatorToWindowEdge(endVertical, 16.0f);
