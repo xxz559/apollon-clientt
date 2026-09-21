@@ -746,7 +746,7 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
 								if (player.isProtected) {
 									ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1, 0, 0, 1));
 								} else if (player.isFriend) {
-									ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0, 1, 1, 
+									ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0, 1, 1,));
 								} else {
 									ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0, 1, 0, 1));
 								}
@@ -933,8 +933,10 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
                         }
 						ImGui::Checkbox(OBFUSCATE("FullBright"), &fullBright);
 				        ImGui::SameLine();
+				        
 			        	ImGui::Checkbox(OBFUSCATE("OSMT FPS Boost"), &
 			        	ImGui::SameLine();
+			        	
 						ImGui::Checkbox(OBFUSCATE("Freelook"), &look360);
                         ImGui::Checkbox(OBFUSCATE("No Hurt Cam"), &noHurtCam);
 			 	        ImGui::SameLine();

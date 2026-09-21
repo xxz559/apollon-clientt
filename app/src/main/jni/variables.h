@@ -1,7 +1,7 @@
 #include "ui_state.h"
 
 json cfg;
-bool fullBright, fogEnable, fastDrop, noHurtCam, noCamDist, noBoatRotation,
+bool fullBright, osmtBoost, fogEnable, fastDrop, noHurtCam, noCamDist, noBoatRotation,
 noCamSleep, placeCam, unlockMarket, noSlowDown, fastFall,
 offWaterTrigger, offSlowdownTrigger, noclip, xrayCam, look360,
 clickAutoMine, fastBridge, blockReach, offDrown, creativeFly, hitBox, enableFov, killAura,
@@ -430,6 +430,7 @@ for (size_t i = 0; i < customButtons.size(); i++) {
     cfg[p + "y"] = customButtons[i].y;
     cfg[p + "w"] = customButtons[i].w;
     cfg[p + "h"] = customButtons[i].h;
+}
     cfg["hudEnabled"] = hudEnabled;
     cfg["hudWatermark"] = hudWatermark;
     cfg["hudCoords"] = hudCoords;
@@ -443,7 +444,6 @@ for (size_t i = 0; i < customButtons.size(); i++) {
     cfg["hudPotionsX"] = hudPotionsX;
     cfg["hudPotionsY"] = hudPotionsY;
     cfg["hudScale"] = hudScale;
-}
 
     writeFile(path, cfg.dump());
 }

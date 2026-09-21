@@ -11,10 +11,6 @@
 #include "Images/Platforms/windows_icon.h"
 #include "Images/Platforms/xbox_icon.h"
 
-#include "Images/death_icon.h"
-#include "Images/heart_icon.h"
-#include "Images/heart_blink_icon.h"
-
 
 // ===== Forward declarations (до первого использования) =====
 float distanceTo(vec3_t *playerPosition, vec3_t *target);
