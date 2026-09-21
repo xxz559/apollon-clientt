@@ -932,12 +932,12 @@ if (ImGui::Button(OBFUSCATE("Buttons"))) pageId = 8;
                             ImGui::PushItemWidth(0);
                         }
 						ImGui::Checkbox(OBFUSCATE("FullBright"), &fullBright);
-				        ImGui::SameLine();
-				        
-			        	ImGui::Checkbox(OBFUSCATE("OSMT FPS Boost"), &
-			        	ImGui::SameLine();
-			        	
-						ImGui::Checkbox(OBFUSCATE("Freelook"), &look360);
+                        ImGui::SameLine();
+
+                        ImGui::Checkbox(OBFUSCATE("OSMT FPS Boost"), &osmtBoost);
+                        ImGui::SameLine();
+
+                        ImGui::Checkbox(OBFUSCATE("Freelook"), &look360);
                         ImGui::Checkbox(OBFUSCATE("No Hurt Cam"), &noHurtCam);
 			 	        ImGui::SameLine();
 				        ImGui::Checkbox(OBFUSCATE("No Cam Distortion"), &noCamDist);
