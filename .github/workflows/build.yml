@@ -2,7 +2,9 @@ name: Build Apollon APK
 
 on:
   push:
-    branches: [ main, master ]
+    branches:
+      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -28,30 +30,35 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: |
+            platform-tools
+            platforms;android-30
+            build-tools;30.0.3
+            ndk;21.4.7075529
+          accept-android-sdk-licenses: true
 
-      - name: Install Android SDK packages
+      - name: Verify Android SDK
         shell: bash
         run: |
           set -euxo pipefail
 
-          # Accept licenses if needed
-          yes | sdkmanager --licenses >/dev/null 2>&1 || true
-
-          # Install required Android SDK components
-          sdkmanager \
-            "platform-tools" \
-            "platforms;android-30" \
-            "build-tools;30.0.3" \
-            "ndk;21.4.7075529"
+          echo "ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT}"
+          sdkmanager --version
+          sdkmanager --list_installed
 
       - name: Set Android SDK and NDK environment
         shell: bash
         run: |
-          echo "ANDROID_HOME=${ANDROID_SDK_ROOT}" >> "$GITHUB_ENV"
-          echo "ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT}" >> "$GITHUB_ENV"
-          echo "ANDROID_NDK_HOME=${ANDROID_SDK_ROOT}/ndk/21.4.7075529" >> "$GITHUB_ENV"
+          set -euxo pipefail
+
+          echo "ANDROID_HOME=${ANDROID_SDK_ROOT}" >> "${GITHUB_ENV}"
+          echo "ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT}" >> "${GITHUB_ENV}"
+          echo "ANDROID_NDK_HOME=${ANDROID_SDK_ROOT}/ndk/${ANDROID_NDK_VERSION}" >> "${GITHUB_ENV}"
+          echo "ANDROID_NDK_ROOT=${ANDROID_SDK_ROOT}/ndk/${ANDROID_NDK_VERSION}" >> "${GITHUB_ENV}"
 
       - name: Make gradlew executable
+        shell: bash
         run: chmod +x ./gradlew
 
       - name: Cache Gradle
@@ -61,8 +68,11 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-${{ hashFiles('/*.gradle*', '/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
       - name: Build Debug APK
+        shell: bash
         run: ./gradlew assembleDebug --stacktrace
 
       - name: Upload APK
